@@ -9,10 +9,14 @@ import ReactDOM from 'react-dom'
 //Vanilla JS : pure JS without framework or library
 //rendering: post the component into HTML page.
 //This component should be instantiated to render using ReactDOM
-const App = function(){
+//const App = function(){
+//return <div>HI!</div>;
+//}
+
+
+const App = ()=>{
 return <div>HI!</div>;
 }
-
 //Take this compoenent's generated HTML and put it on the page(in the DOM)
 
 //ReactDOM.render(App);
