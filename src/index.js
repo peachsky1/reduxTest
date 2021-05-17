@@ -1,6 +1,8 @@
 //ES6
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+
+import SearchBar from './components/search_bar';
 //Create a new component. This component should prduce some HTML
 //const is ES6 syntex. const = final value
 //JSX : subset of dialect from JS which looks like HTML
@@ -13,9 +15,12 @@ import ReactDOM from 'react-dom'
 //return <div>HI!</div>;
 //}
 
-
+//const vs let vs var
+const API_KEY = 'AIzaSyCBP24YKawTjT-_H_tbP7IIs3wFkiWXoIY'
 const App = ()=>{
-return <div>HI!</div>;
+return (<div>
+            <SearchBar />
+        </div>);
 }
 //Take this compoenent's generated HTML and put it on the page(in the DOM)
 
