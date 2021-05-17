@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 import SearchBar from './components/search_bar';
 //Create a new component. This component should prduce some HTML
 //const is ES6 syntex. const = final value
@@ -16,7 +17,7 @@ import SearchBar from './components/search_bar';
 //}
 
 //const vs let vs var
-const API_KEY = 'AIzaSyCBP24YKawTjT-_H_tbP7IIs3wFkiWXoIY'
+const API_KEY = process.env.API_KEY;
 const App = ()=>{
 return (<div>
             <SearchBar />
