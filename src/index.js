@@ -17,6 +17,7 @@ import SearchBar from './components/search_bar';
 //}
 
 //const vs let vs var
+//https://dev.to/anuradhasivasubramanian/5-things-to-remember-when-using-an-env-file-to-store-you-api-key-in-a-react-app-4f2o
 const API_KEY = process.env.API_KEY;
 const App = ()=>{
 return (<div>
