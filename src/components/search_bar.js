@@ -10,7 +10,7 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: "123",
+      term: "HEREIS INPUT BOX",
     };
   }
   // render function acts like function method. This also will return JSX
