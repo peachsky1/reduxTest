@@ -1,6 +1,11 @@
-import react from "React";
+import React from "React";
 
 const VideoDetail = ({ video }) => {
+  // handling null
+  if (!video) {
+    return <div>Loading...</div>;
+  }
+
   const videoId = video.id.videoId;
   // lets craft youtube id to embed
   // const url = 'https://www.youtube.com/embed' + videoId;

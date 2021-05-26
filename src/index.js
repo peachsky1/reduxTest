@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import YTSearch from "youtube-api-search";
 import SearchBar from "./components/search_bar";
 import VideoList from "./components/video_list";
+import VideoDetail from "./components/video_details";
 //Create a new component. This component should prduce some HTML
 //const is ES6 syntex. const = final value
 //JSX : subset of dialect from JS which looks like HTML
@@ -40,6 +41,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        <VideoDetail video={this.state.videos[4]} />
         <VideoList videos={this.state.videos} />
       </div>
     );
