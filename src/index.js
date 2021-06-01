@@ -1,4 +1,5 @@
 //ES6
+import _ from "lodash";
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import YTSearch from "youtube-api-search";
@@ -33,7 +34,11 @@ class App extends Component {
       selectedVideo: null,
     };
 
-    YTSearch({ key: API_KEY, term: "lucid air" }, (videos) => {
+    this.videoSearch("surfboards");
+  }
+  // defind callback for video search
+  videoSearch(term) {
+    YTSearch({ key: API_KEY, term: term }, (videos) => {
       // console.log(data);
       this.setState({
         videos: videos,
@@ -46,9 +51,14 @@ class App extends Component {
   }
 
   render() {
+    // debounce
+    const videoSearch = _.debounce((term) => {
+      this.videoSearch(term);
+    }, 1000);
+
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={(selectedVideo) => this.setState({ selectedVideo })}
